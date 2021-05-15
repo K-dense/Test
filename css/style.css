@@ -1,0 +1,229 @@
+* {
+    text-decoration: none;
+}
+
+/* INDEX */
+
+.heading {
+    text-align: center;
+    color: salmon;
+    text-shadow: 4px 4px 10px rgb(77, 67, 67);;
+}
+
+nav {
+    background-color:navajowhite;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 30px;
+}
+
+
+.title{
+    color:orange;
+}
+
+#italic{
+    color:green;
+}
+
+.container {
+    border: 10px dotted rgb(43, 134, 170);
+    margin: 50px 0 50px 0;
+    padding: 30px 0 10px 35px;
+}
+
+.flex {
+    border: 3px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#flex-p {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background: blue;
+    margin: 40px;
+    padding: 30px;
+}
+
+@keyframes fadeMe {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#box2 {
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, purple, magenta, pink, purple);
+}
+
+@keyframes getBigger {
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    100% {transform: scale(.5);}
+}
+
+#box3 {
+    animation: getBigger 3s ease-in forwards;
+    border-radius: 50%;
+    background: salmon;
+}
+
+@keyframes changeColors {
+    0% {background-image:radial-gradient(circle, red, orange, yellow, green, cyan, purple);}
+    10% {background-image:radial-gradient(circle, orange, yellow, green, cyan, purple, red);}
+    20% {background-image:radial-gradient(circle, yellow, green, cyan, purple, red, orange);}
+    30% {background-image:radial-gradient(circle, green, cyan, purple, red, orange, yellow);}
+    40% {background-image:radial-gradient(circle, cyan, purple, red, orange, yellow, green);}
+    50% {background-image:radial-gradient(circle, purple, red, orange, yellow, green, cyan);}
+    60% {background-image:radial-gradient(circle, red, orange, yellow, green, cyan, purple);}
+    70% {background-image:radial-gradient(circle, orange, yellow, green, cyan, purple, red);}
+    80% {background-image:radial-gradient(circle, yellow, green, cyan, purple, red, orange);}
+    90% {background-image:radial-gradient(circle, green, cyan, purple, red, orange, yellow);}
+    100% {background-image:radial-gradient(circle, cyan, purple, red, orange, yellow, green);}
+}
+
+#box4 {
+    animation: changeColors infinite 1s;
+}
+
+@keyframes moveBox {
+    0% {left: 0px; top: 0px;}
+    25% {left: 100px; top: 0px;}
+    50% {left: 100px; top: 200px;}
+    75% {left: 0px; top: 200px;}
+    100% {left: 0px; top: 0px;}
+}
+
+#box5 {
+    position: relative;
+    background:sandybrown;
+    animation: moveBox 5s 3s;
+}
+
+#box6 {
+    top: 10px;
+    left: 20px;
+    position: relative;
+}
+
+html {
+    background-image: linear-gradient(to right, #ffdef2, #f2e2ff, #e2eeff, #ddfffc, #ffffe3);
+}
+
+img {
+    box-shadow: 8px 8px 10px 3px grey;
+}
+
+.circle-img {
+    border-radius: 50%;
+}
+
+/* CONTACT ME */
+
+form input, textarea, button {
+    display: block;
+    margin:30px;
+}
+
+/* CONTACT ME MATERIALIZE */
+
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    margin: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.input-field {
+    margin: 20px;
+}
+
+
+/* ABOUT PAGE */
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 19.5% ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    color: #444;
+  }
+
+  .boxGrid {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+  }
+
+  .a {
+    grid-column: col / span  2;
+    grid-row: row ;
+  }
+  .b {
+    grid-column: col 4 / span  2 ;
+    grid-row: row ;
+  }
+  .c {
+    grid-column: col ;
+    grid-row: row 2 ;
+  }
+  .d {
+    grid-column: col 2 / span  3 ;
+    grid-row: row 2 ;
+  }
+
+  .e {
+    grid-column: col / span  5;
+    grid-row: row 3;
+  }
+
+  .f {
+    grid-column: col 3 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+  }
